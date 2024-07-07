@@ -82,6 +82,7 @@
 </body>
 </html>
 -->
+<!--
 <!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -143,4 +144,66 @@
     </div>
 </body>
 </html>
+-->
 
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography Website</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+        
+       .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+        
+       .photo-container {
+            margin: 10px 0;
+        }
+        
+       .photo-container img {
+            width: calc(100% - 20px); /* Leave 20px gap on both sides */
+            height: auto; /* Maintain aspect ratio */
+            object-fit: cover;
+            border-radius: 0; /* Remove border radius */
+            margin: 10px; /* Add margin to create gap */
+        }
+        
+       .photo-container p {
+            font-size: 18px;
+            line-height: 1.5;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="photo-container">
+            <img src="pics/r1.png" alt="Image 1">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+        </div>
+        <div class="photo-container">
+            <img src="pics/r2.png" alt="Image 2">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+        </div>
+        <div class="photo-container">
+            <img src="pics/r3.png" alt="Image 3">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+        </div>
+    </div>
+</body>
+</html>
