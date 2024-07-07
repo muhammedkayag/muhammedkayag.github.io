@@ -1,3 +1,4 @@
+<!--
 <!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -80,3 +81,69 @@
     </main>
 </body>
 </html>
+-->
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Resimli Sayfa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin: 20px;
+        }
+
+        .image-container {
+            width: 300px; /* Resimlerin genişliği */
+            margin: 10px;
+        }
+
+        .image {
+            width: 100%;
+            height: auto;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+        }
+
+        .description {
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .image-container {
+                width: 50%; /* Ekran dar olduğunda resimlerin genişliği */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="image-container">
+            <img src="pics/r1.png" alt="Resim 1 Açıklaması" class="image">
+            <p class="description">Resim 1 Açıklaması</p>
+        </div>
+
+        <div class="image-container">
+            <img src="pics/r2.png" alt="Resim 2 Açıklaması" class="image">
+            <p class="description">Resim 2 Açıklaması</p>
+        </div>
+
+        <div class="image-container">
+            <img src="pics/r3.png" alt="Resim 3 Açıklaması" class="image">
+            <p class="description">Resim 3 Açıklaması</p>
+        </div>
+    </div>
+</body>
+</html>
+
