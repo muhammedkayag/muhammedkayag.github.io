@@ -82,66 +82,82 @@
 </body>
 </html>
 -->
-
 <!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Resimli Sayfa</title>
+    <title>Photography Website</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
-
+        
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+        
         .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            align-items: center;
-            margin: 20px;
         }
-
-        .image-container {
-            width: 300px; /* Resimlerin genişliği */
+        
+        .photo-container {
+            width: calc(33.33% - 20px);
             margin: 10px;
+            display: inline-block;
+            vertical-align: top;
         }
-
-        .image {
+        
+        .photo-container img {
             width: 100%;
-            height: auto;
-            border: 1px solid #ccc;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
             margin-bottom: 10px;
         }
-
-        .description {
+        
+        .photo-container p {
+            font-size: 18px;
+            line-height: 1.5;
             text-align: center;
+            margin-bottom: 20px;
         }
-
+        
+        /* Responsive design */
         @media (max-width: 768px) {
-            .image-container {
-                width: 50%; /* Ekran dar olduğunda resimlerin genişliği */
+            .photo-container {
+                width: calc(50% - 20px);
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .photo-container {
+                width: 100%;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="image-container">
-            <img src="pics/r1.png" alt="Resim 1 Açıklaması" class="image">
-            <p class="description">Resim 1 Açıklaması</p>
+        <div class="photo-container">
+            <img src="pics/r1.png" alt="Image 1">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
         </div>
-
-        <div class="image-container">
-            <img src="pics/r2.png" alt="Resim 2 Açıklaması" class="image">
-            <p class="description">Resim 2 Açıklaması</p>
+        <div class="photo-container">
+            <img src="pics/r2.png" alt="Image 2">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
         </div>
-
-        <div class="image-container">
-            <img src="pics/r3.png" alt="Resim 3 Açıklaması" class="image">
-            <p class="description">Resim 3 Açıklaması</p>
+        <div class="photo-container">
+            <img src="pics/r3.png" alt="Image 3">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
         </div>
     </div>
 </body>
