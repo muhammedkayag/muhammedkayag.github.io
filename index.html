@@ -287,9 +287,9 @@
             background-color: #d3d3d3;
             padding: 10px;
             border-radius: 5px;
-            overflow-x: auto; /* Add horizontal scrollbar */
             width: calc(100% - 20px); /* Make the code block full width with gap */
             margin: 10px; /* Add margin to create gap */
+            overflow-x: auto; /* Add horizontal scrollbar */
         }
         
       .code-block button {
@@ -311,7 +311,11 @@
             width: 100%; /* Make the pre element full width */
             white-space: pre-wrap; /* Allow text to wrap */
             font-size: 14px; /* Adjust code font size */
-            overflow-x: auto; /* Add horizontal scrollbar */
+        }
+        
+      .code-block pre code {
+            overflow-x: auto; /* Add horizontal scrollbar to code element */
+            padding: 10px;
         }
     </style>
 </head>
@@ -320,7 +324,7 @@
         <div class="photo-container">
             <img src="pics/r1.png" alt="Image 1">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
-            <div class="code-block"><button onclick="navigator.clipboard.writeText(this.nextElementSibling.innerText).then(() => { this.innerText='Copied'; setTimeout(() => { this.innerText='Copy Code'; }, 2000); });">Copy Code</button><pre><code style="width: 100%;">rustscan -a 10.10.2.34 -- -sC -sV</code></pre></div>
+            <div class="code-block"><button onclick="navigator.clipboard.writeText(this.nextElementSibling.innerText).then(() => { this.innerText='Copied'; setTimeout(() => { this.innerText='Copy Code'; }, 2000); });">Copy Code</button><pre><code style="width: 100%;">rustscan -a 10.10.2.34 -- -sC -sV Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</code></pre></div>
         </div>
         <div class="photo-container">
             <img src="pics/r2.png" alt="Image 2">
