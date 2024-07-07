@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>muhammedkayag</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        main {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #f7f7f7;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .photo-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .photo-container img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+        
+        .photo-container p {
+            margin: 20px 0;
+            font-size: 18px;
+            line-height: 1.5;
+            text-align: center;
+        }
+        
+        /* Responsive design */
+        @media (max-width: 600px) {
+            main {
+                padding: 10px;
+            }
+            .photo-container img {
+                height: 200px;
+            }
+            .photo-container p {
+                font-size: 16px;
+            }
+        }
+        
+        @media (max-width: 400px) {
+            main {
+                padding: 5px;
+            }
+            .photo-container img {
+                height: 150px;
+            }
+            .photo-container p {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section class="photo-container">
+            <img src="pics/r1.png" alt="Image 1">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+            <img src="pics/r2.png" alt="Image 2">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+            <img src="pics/r3.png" alt="Image 3">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+        </section>
+    </main>
+</body>
+</html>
