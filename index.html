@@ -1,10 +1,12 @@
-<!--
+
 <!DOCTYPE html>
-<html lang="tr">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>muhammedkayag</title>
+    <title>Muhammed Kaya</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <style>
         * {
             box-sizing: border-box;
@@ -12,271 +14,55 @@
             padding: 0;
         }
         
-        main {
-            max-width: 800px;
+        html, body {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: white; /* Yazı rengini beyaz yapar */
+        }
+        
+        body {
+            background-image: url('pics/bgn.jpg'); /* Arka plan resmi */
+            background-size: cover; /* Resmi ekran boyutuna göre ayarlar */
+            background-position: center; /* Resmi ortalar */
+            background-repeat: no-repeat; /* Resmin tekrarlanmasını engeller */
+            background-attachment: fixed; /* Arka planın sabit kalmasını sağlar */
+        }
+
+        .overlay {
+            background: rgba(0, 0, 0, 0.7); /* Siyah bir örtü ekler */
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .container {
+            position: relative;
+            z-index: 2;
+            max-width: 1200px;
             margin: 40px auto;
             padding: 20px;
-            background-color: #f7f7f7;
-            border: 1px solid #ddd;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        
-        .photo-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        
-        .photo-container img {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-            margin: 20px 0;
+            background: rgba(23, 52, 80, 0.584); /* Kırmızı yarı saydam bir arka plan */
             border-radius: 10px;
         }
         
-        .photo-container p {
-            margin: 20px 0;
-            font-size: 18px;
-            line-height: 1.5;
-            text-align: center;
-        }
-        
-        /* Responsive design */
-        @media (max-width: 600px) {
-            main {
-                padding: 10px;
-            }
-            .photo-container img {
-                height: 200px;
-            }
-            .photo-container p {
-                font-size: 16px;
-            }
-        }
-        
-        @media (max-width: 400px) {
-            main {
-                padding: 5px;
-            }
-            .photo-container img {
-                height: 150px;
-            }
-            .photo-container p {
-                font-size: 14px;
-            }
-        }
-    </style>
-</head>
-<body>
-    <main>
-        <section class="photo-container">
-            <img src="pics/r1.png" alt="Image 1">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
-            <img src="pics/r2.png" alt="Image 2">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
-            <img src="pics/r3.png" alt="Image 3">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
-        </section>
-    </main>
-</body>
-</html>
--->
-<!--
-<!DOCTYPE html>
-<html lang="tr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photography Website</title>
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        
-        html, body {
-            height: 100%;
-            margin: 0;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 40px auto;
-            padding: 20px;
-        }
-        
         .photo-container {
             margin: 10px 0;
         }
         
         .photo-container img {
-            width: 100%;
-            height: 200px;
+            width: calc(100% - 20px); /* Kenarlarda 20px boşluk bırakır */
+            height: auto; /* En-boy oranını korur */
             object-fit: cover;
-            border-radius: 0; /* Remove border radius */
-            margin-bottom: 10px;
+            border-radius: 0; /* Köşe yuvarlamasını kaldırır */
+            margin: 10px; /* Boşluk ekler */
         }
         
         .photo-container p {
-            font-size: 18px;
-            line-height: 1.5;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <div class="photo-container">
-            <img src="pics/r1.png" alt="Image 1">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
-        </div>
-        <div class="photo-container">
-            <img src="pics/r2.png" alt="Image 2">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
-        </div>
-        <div class="photo-container">
-            <img src="pics/r3.png" alt="Image 3">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
-        </div>
-    </div>
-</body>
-</html>
--->
-<!--
-<!DOCTYPE html>
-<html lang="tr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photography Website</title>
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        
-        html, body {
-            height: 100%;
-            margin: 0;
-        }
-        
-       .container {
-            max-width: 1200px;
-            margin: 40px auto;
-            padding: 20px;
-        }
-        
-       .photo-container {
-            margin: 10px 0;
-        }
-        
-       .photo-container img {
-            width: calc(100% - 20px); /* Leave 20px gap on both sides */
-            height: auto; /* Maintain aspect ratio */
-            object-fit: cover;
-            border-radius: 0; /* Remove border radius */
-            margin: 10px; /* Add margin to create gap */
-        }
-        
-       .photo-container p {
-            font-size: 18px;
-            line-height: 1.5;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .code-block {
-            position: relative;
-            background-color: #d3d3d3;
-            padding: 10px;
-            border-radius: 5px;
-            overflow-x: auto;
-            width: calc(100% - 20px); /* Make the code block full width with gap */
-            margin: 10px; /* Add margin to create gap */
-        }
-        
-       .code-block button {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            padding: 5px 10px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 3px;
-            cursor: pointer;
-            font-size: 14px; /* Adjust button font size */
-        }
-        
-       .code-block pre {
-            margin: 0;
-            padding: 10px;
-            width: 100%; /* Make the pre element full width */
-            white-space: pre-wrap; /* Allow text to wrap */
-            font-size: 14px; /* Adjust code font size */
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <div class="photo-container">
-            <img src="pics/r1.png" alt="Image 1">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
-            <div class="code-block"><button onclick="navigator.clipboard.writeText(this.nextElementSibling.innerText).then(() => { this.innerText='Copied'; setTimeout(() => { this.innerText='Copy Code'; }, 2000); });">Copy Code</button><pre><code style="width: 100%;">rustscan -a 10.10.2.34 -- -sC -sV</code></pre></div>
-        </div>
-        <div class="photo-container">
-            <img src="pics/r2.png" alt="Image 2">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
-        </div>
-        <div class="photo-container">
-            <img src="pics/r3.png" alt="Image 3">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
-        </div>
-    </div>
-</body>
-</html>
--->
-<!DOCTYPE html>
-<html lang="tr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photography Website</title>
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        
-        html, body {
-            height: 100%;
-            margin: 0;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 40px auto;
-            padding: 20px;
-        }
-        
-        .photo-container {
-            margin: 10px 0;
-        }
-        
-        .photo-container img {
-            width: calc(100% - 20px); /* Leave 20px gap on both sides */
-            height: auto; /* Maintain aspect ratio */
-            object-fit: cover;
-            border-radius: 0; /* Remove border radius */
-            margin: 10px; /* Add margin to create gap */
-        }
-        
-        .photo-container p {
-            font-size: 18px;
+            font-size: 22px;
             line-height: 1.5;
             text-align: center;
             margin-bottom: 20px;
@@ -284,12 +70,12 @@
         
         .code-block {
             position: relative;
-            background-color: #d3d3d3;
+            background-color: #ffffff;
             padding: 10px;
             border-radius: 5px;
-            width: calc(100% - 20px); /* Make the code block full width with gap */
-            margin: 10px; /* Add margin to create gap */
-            overflow-x: auto; /* Add horizontal scrollbar */
+            width: calc(100% - 20px); /* Tam genişlik */
+            margin: 10px; /* Boşluk ekler */
+            overflow-x: auto; /* Yatay kaydırma çubuğu ekler */
         }
         
         .code-block button {
@@ -302,43 +88,106 @@
             border: none;
             border-radius: 3px;
             cursor: pointer;
-            font-size: 14px; /* Adjust button font size */
+            font-size: 14px; /* Buton yazı boyutunu ayarlar */
         }
         
         .code-block pre {
             margin: 0;
             padding: 10px;
-            width: 100%; /* Make the pre element full width */
-            white-space: pre; /* Prevent text wrapping */
-            font-size: 14px; /* Adjust code font size */
-            overflow-x: auto; /* Add horizontal scrollbar */
+            width: 100%; /* Tam genişlik */
+            white-space: pre; /* Satır kaymasını engeller */
+            font-size: 14px; /* Kod yazı boyutunu ayarlar */
+            color:black;
+            font-family: Arial, sans-serif;
+            overflow-x: auto; /* Yatay kaydırma çubuğu ekler */
         }
         
         .code-block pre code {
             display: block;
-            overflow-x: auto; /* Add horizontal scrollbar to code element */
+            overflow-x: auto; /* Yatay kaydırma çubuğu ekler */
             padding: 10px;
-            white-space: nowrap; /* Prevent text wrapping */
+            white-space: nowrap; /* Satır kaymasını engeller */
+        }
+        
+        .social-buttons {
+            display: flex;
+            gap: 10px; /* İkonlar arasındaki boşluk */
+            justify-content: center; /* Butonları ortalar */
+            align-items: center; /* Dikeyde ortalar */
+            padding: 20px;
+        }
+
+        .social-button {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 50px;
+            height: 50px;
+            background-color: #0077b5;
+            color: white;
+            border-radius: 50%;
+            text-decoration: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .social-button.github {
+            background-color: #333;
+        }
+
+
+        .social-button.mail {
+            background-color: #db4437;
+        }
+
+        .social-button img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        }
+
+        .social-button.tryhackme {
+            background-color: white; /* Arka plan rengini şeffaf yapar */
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="photo-container">
-            <img src="pics/r1.png" alt="Image 1">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
-            <div class="code-block">
-                <button onclick="navigator.clipboard.writeText(this.nextElementSibling.innerText).then(() => { this.innerText='Copied'; setTimeout(() => { this.innerText='Copy Code'; }, 2000); });">Copy Code</button>
-                <pre><code style="width: 100%;">rustscan -a 10.10.2.34 -- -sC -sV Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</code></pre>
-            </div>
+        <div class="photo-container" style="display: flex; justify-content: center; align-items: center; height: 50vh;">
+            <img src="pics/profile.png" alt="Sample Image" style="width: 50%; max-width: 400px; height: auto;">
         </div>
         <div class="photo-container">
-            <img src="pics/r2.png" alt="Image 2">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+        <p>~Muhammed Kaya~</p>
+        <p></p>
+        <p style="font-size: 36px; color: red;text-decoration: underline; text-decoration-color: red;">#Who am i?</p>
+        <p>Cyber Security Researcher, Computer Engineering student at Sakarya University of Applied Sciences, passionate of Cyber Security.</p>
+        <p></p>
+        <p style="font-size: 36px; color: red;text-decoration: underline; text-decoration-color: red;">#My WriteUps:</p>
+        <p></p>
+        <br>
+        <p><a style="font-size: 30px; color: red;"href="https://muhammedkayag.github.io/TryHackMe-Overpass3-Hosting-WriteUp">TryHackMe-Overpass3-Hosting-WriteUp</a></p>
+        <p><a style="font-size: 30px; color: red;"href="https://muhammedkayag.github.io/TryHackMe-Road-WriteUp">TryHackMe-Road-WriteUp</a></p>
+        <p><a style="font-size: 30px; color: red;"href="https://muhammedkayag.github.io/TryHackMe-Blog-WriteUp">TryHackMe-Blog-WriteUp</a></p>
+        <p><a style="font-size: 30px; color: red;"href="https://muhammedkayag.github.io/TryHackMe-MrRobot-WriteUp">TryHackMe-MrRobot-WriteUp</a></p>
+        <p><a style="font-size: 30px; color: red;"href="https://muhammedkayag.github.io/TryHackMe-0day-WriteUp">TryHackMe-0day-WriteUp</a></p>
+        <p></p>
+        <p></p>
+        <br>
+        <p style="font-size: 36px; color: red;text-decoration: underline; text-decoration-color: red;">#My Accounts:</p>
+        <div class="social-buttons">
+            <a href="https://tryhackme.com/p/armenace" target="_blank" class="social-button tryhackme">
+                <img src="pics/thm4.png" alt="TryHackMe">
+            </a>
+            <a href="https://www.linkedin.com/in/muhammed-kaya-76a8a1282/" target="_blank" class="social-button linkedin">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/muhammedkayag" target="_blank" class="social-button github">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="mailto:muhammedlllkaya@gmail.com" target="_blank" class="social-button mail">
+                <i class="fas fa-envelope"></i>
+            </a>
         </div>
-        <div class="photo-container">
-            <img src="pics/r3.png" alt="Image 3">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
         </div>
     </div>
 </body>
