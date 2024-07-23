@@ -1,195 +1,195 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Muhammed Kaya</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        
-        html, body {
-            height: 100%;
-            margin: 0;
-            font-family: Arial, sans-serif;
-            color: white; /* Yazı rengini beyaz yapar */
-        }
-        
-        body {
-            background-image: url('pics/bgn.jpg'); /* Arka plan resmi */
-            background-size: cover; /* Resmi ekran boyutuna göre ayarlar */
-            background-position: center; /* Resmi ortalar */
-            background-repeat: no-repeat; /* Resmin tekrarlanmasını engeller */
-            background-attachment: fixed; /* Arka planın sabit kalmasını sağlar */
-        }
-
-        .overlay {
-            background: rgba(0, 0, 0, 0.7); /* Siyah bir örtü ekler */
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-        }
-
-        .container {
-            position: relative;
-            z-index: 2;
-            max-width: 1200px;
-            margin: 40px auto;
-            padding: 20px;
-            background: rgba(23, 52, 80, 0.584); /* Kırmızı yarı saydam bir arka plan */
-            border-radius: 10px;
-        }
-        
-        .photo-container {
-            margin: 10px 0;
-        }
-        
-        .photo-container img {
-            width: calc(100% - 20px); /* Kenarlarda 20px boşluk bırakır */
-            height: auto; /* En-boy oranını korur */
-            object-fit: cover;
-            border-radius: 0; /* Köşe yuvarlamasını kaldırır */
-            margin: 10px; /* Boşluk ekler */
-        }
-        
-        .photo-container p {
-            font-size: 22px;
-            line-height: 1.5;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        
-        .code-block {
-            position: relative;
-            background-color: #ffffff;
-            padding: 10px;
-            border-radius: 5px;
-            width: calc(100% - 20px); /* Tam genişlik */
-            margin: 10px; /* Boşluk ekler */
-            overflow-x: auto; /* Yatay kaydırma çubuğu ekler */
-        }
-        
-        .code-block button {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            padding: 5px 10px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 3px;
-            cursor: pointer;
-            font-size: 14px; /* Buton yazı boyutunu ayarlar */
-        }
-        
-        .code-block pre {
-            margin: 0;
-            padding: 10px;
-            width: 100%; /* Tam genişlik */
-            white-space: pre; /* Satır kaymasını engeller */
-            font-size: 14px; /* Kod yazı boyutunu ayarlar */
-            color:black;
-            font-family: Arial, sans-serif;
-            overflow-x: auto; /* Yatay kaydırma çubuğu ekler */
-        }
-        
-        .code-block pre code {
-            display: block;
-            overflow-x: auto; /* Yatay kaydırma çubuğu ekler */
-            padding: 10px;
-            white-space: nowrap; /* Satır kaymasını engeller */
-        }
-        
-        .social-buttons {
-            display: flex;
-            gap: 10px; /* İkonlar arasındaki boşluk */
-            justify-content: center; /* Butonları ortalar */
-            align-items: center; /* Dikeyde ortalar */
-            padding: 20px;
-        }
-
-        .social-button {
-            display: inline-flex;
-            justify-content: center;
-            align-items: center;
-            width: 50px;
-            height: 50px;
-            background-color: #0077b5;
-            color: white;
-            border-radius: 50%;
-            text-decoration: none;
-            font-size: 24px;
-            cursor: pointer;
-        }
-
-        .social-button.github {
-            background-color: #333;
-        }
-
-
-        .social-button.mail {
-            background-color: #db4437;
-        }
-
-        .social-button img {
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-        }
-
-        .social-button.tryhackme {
-            background-color: white; /* Arka plan rengini şeffaf yapar */
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-    <div class="container">
-        <div class="photo-container" style="display: flex; justify-content: center; align-items: center; height: 50vh;">
-            <img src="pics/profile.png" alt="Sample Image" style="width: 50%; max-width: 400px; height: auto;">
+    <header class="header">
+        <a href="#home" class="logo">Muhammed Kaya</a>
+
+        <i class="bx bx-menu" id="menu-icon"></i>
+
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#education">Education</a>
+            <a href="#writeups">WriteUps</a>
+            <a href="#services">Skills</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="home" id="home">
+        <div class="home-content">
+            <h1>Hi! It's <span>Muhammed</span></h1>
+            <h3 class="text-animation">I'm a <span></span></h3>
+            <p></p>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/muhammed-kaya-76a8a1282/"><i class="bx bxl-linkedin"></i></a>
+                <a href="https://github.com/muhammedkayag"><i class="bx bxl-github"></i></a>
+                <a href="mailto:muhammedlllkaya@gmail.com"><i class="bx bxl-gmail"></i></a>
+                <!--<a href="#"><img src="thm4.png"></a> -->
+
+            </div>
+
+            <div class="btn-group">
+                <a href="#contact" class="btn">Contact</a>
+
+            </div>
         </div>
-        <div class="photo-container">
-        <p>~Muhammed Kaya~</p>
-        <p></p>
-        <p style="font-size: 36px; color: red;text-decoration: underline; text-decoration-color: red;">#Who am i?</p>
-        <p>Cyber Security Researcher, Computer Engineering student at Sakarya University of Applied Sciences, passionate of Cyber Security.</p>
-        <p></p>
-        <p style="font-size: 36px; color: red;text-decoration: underline; text-decoration-color: red;">#My WriteUps:</p>
-        <p></p>
-        <br>
-        <p><a style="font-size: 30px; color: red;"href="https://muhammedkayag.github.io/TryHackMe-Overpass3-Hosting-WriteUp">TryHackMe-Overpass3-Hosting-WriteUp</a></p>
-        <p><a style="font-size: 30px; color: red;"href="https://muhammedkayag.github.io/TryHackMe-Road-WriteUp">TryHackMe-Road-WriteUp</a></p>
-        <p><a style="font-size: 30px; color: red;"href="https://muhammedkayag.github.io/TryHackMe-Blog-WriteUp">TryHackMe-Blog-WriteUp</a></p>
-        <p><a style="font-size: 30px; color: red;"href="https://muhammedkayag.github.io/TryHackMe-MrRobot-WriteUp">TryHackMe-MrRobot-WriteUp</a></p>
-        <p><a style="font-size: 30px; color: red;"href="https://muhammedkayag.github.io/TryHackMe-0day-WriteUp">TryHackMe-0day-WriteUp</a></p>
-        <p></p>
-        <p></p>
-        <br>
-        <p style="font-size: 36px; color: red;text-decoration: underline; text-decoration-color: red;">#My Accounts:</p>
-        <div class="social-buttons">
-            <a href="https://tryhackme.com/p/armenace" target="_blank" class="social-button tryhackme">
-                <img src="pics/thm4.png" alt="TryHackMe">
-            </a>
-            <a href="https://www.linkedin.com/in/muhammed-kaya-76a8a1282/" target="_blank" class="social-button linkedin">
-                <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="https://github.com/muhammedkayag" target="_blank" class="social-button github">
-                <i class="fab fa-github"></i>
-            </a>
-            <a href="mailto:muhammedlllkaya@gmail.com" target="_blank" class="social-button mail">
-                <i class="fas fa-envelope"></i>
-            </a>
+            <div class="home-img">
+                <img src="pics/profile4.png" alt="">
+            </div>
+    </section>
+    <section class="education" id="education">
+        <h2 class="heading">Education</h2>
+
+        <div class="timeline-items">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                    <div style="text-align: center; color: #131313;" class="timeline-date">2018</div>
+                    <div class="timeline-content">
+                        <h3 style="text-align: center; "> High School (2018-2022)</h3>
+                        <p style="text-align: center;">I studied at Battalgazi Anatolian High School between 2018-2022.</p>
+                    </div>
+
+            </div>
+            
+
         </div>
+        
+        <div class="timeline-items">
+            <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div style="text-align: center; color: #131313;" class="timeline-date" >2023</div>
+                    <div class="timeline-content">
+                        <h3 style="text-align: center;"> University (2023-2027)</h3>
+                        <p style="text-align: center;">I started Computer Engineering in 2023 at Sakarya University of Applied Sciences</p>
+                    </div>
+
+                    </div>
+            
+
         </div>
-    </div>
+
+    </section>
+    <section class="services" id="services">
+        <h2 class="heading">Skills</h2>
+        <div class="services-container">
+            <div class="service-box">
+                <div class="service-info">
+                    <h4>Penetration Testing</h4>
+                    <p>I am solving ctfs, joining bug bounties, writing writeups for this topic. Almost in my every free time i find myself trying to hack a machine. I have intermediate level experience in this topic.</p>
+                 </div>
+            </div>
+            <div class="service-box">
+                <div class="service-info">
+                    <h4>Programming</h4>
+                    <p>I am continually learning programming. I have experience in python, c, html, css, sql. I am coding exploits, hack-tools and other programs according to need.</p>
+                 </div>
+            </div>
+        </div>
+    </section>
+    <section class="writeups" id="writeups">
+        <h2 class="heading">WriteUps</h2>
+            <div class="btn-group">
+            <a  href="https://muhammedkayag.github.io/TryHackMe-Overpass3-Hosting-WriteUp" class="btn" style="margin: 0 auto;" >TryHackMe-Overpass3-Hosting-WriteUp</a>
+            </div>
+            <br>
+            <br>
+            <br>
+            <div class="btn-group">
+            <a  href="https://muhammedkayag.github.io/TryHackMe-Road-WriteUp" class="btn" style="margin: 0 auto;">TryHackMe-Road-WriteUp</a>
+            </div>
+            <br>
+            <br>
+            <br>
+            <div class="btn-group">
+                <a href="https://muhammedkayag.github.io/TryHackMe-Blog-WriteUp" class="btn" style="margin: 0 auto;">TryHackMe-Blog-WriteUp</a>
+            </div>
+            <br>
+            <br>
+            <br>
+            <div class="btn-group">
+                <a  href="https://muhammedkayag.github.io/TryHackMe-MrRobot-WriteUp" class="btn" style="margin: 0 auto;">TryHackMe-MrRobot-WriteUp</a>
+            </div>
+            <br>
+            <br>
+            <br>
+            <div class="btn-group">
+                <a  href="https://muhammedkayag.github.io/TryHackMe-0day-WriteUp" class="btn" style="margin: 0 auto;">TryHackMe-0day-WriteUp</a>
+            </div>
+    </section>
+    <!--
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact</h2>
+        <form action="" class="action">
+            <div class="input-group">
+                <div class="input-box">
+                    <input type="text" placeholder="Full Name">
+                    <input type="email" placeholder="Email">
+                </div>
+                <div class="input-box">
+                    <input type="number" placeholder="Phone Number">
+                    <input type="text" placeholder="Subject">
+                </div>
+            </div>
+            <div class="input-group-2">
+                <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+                <input type="submit" value="Send Message" class="btn">
+            </div>
+        </form>
+    </section>
+    -->
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact</h2>
+        <form action="https://api.web3forms.com/submit" method="POST">
+
+            <div class="input-box">
+            <input type="hidden" name="access_key" value="9634c58e-7825-43f0-a211-cc62c1213839">
+        
+            <input placeholder="Name" type="text" name="name" required>
+            <input placeholder="Email" type="email" name="email" required>
+            <textarea placeholder="Message" name="message" required></textarea>
+            <button class="btn" type="submit">Send Message</button>
+            </div>
+        </form>
+    </section>
+    <footer class="footer">
+        <div class="social">
+            <a href="https://www.linkedin.com/in/muhammed-kaya-76a8a1282/"><i class="bx bxl-linkedin"></i></a>
+            <a href="https://github.com/muhammedkayag"><i class="bx bxl-github"></i></a>
+            <a href="mailto:muhammedlllkaya@gmail.com"><i class="bx bxl-gmail"></i></a>
+        </div>
+        <ul class="list">
+            <li>
+                <a href="#home">Home</a>
+            </li>
+            <li>
+                <a href="#education">Education</a>
+            </li>
+            <li>
+                <a href="#writeups">WriteUps</a>
+            </li>
+            <li>
+                <a href="#services">Skills</a>
+            </li>
+            
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+            
+            
+        </ul>
+        <p class="copyright">
+            Muhammed Kaya | All Rights Reserved
+        </p>
+    </footer>
+
+    <script src="script.js"></script>   
 </body>
 </html>
 
