@@ -233,19 +233,19 @@ span{
     }
     21%,
     40%{
-       content: "Penetration Tester";
+       content: "Cyber Security Enthusiast";
     }
     41%,
     60%{
-       content: "Software Developer";
+         content: "Penetration Tester";
     }
     61%,
     80%{
-       content: "Cyber Security Enthusiast";
+       content: "Vulnerability Searcher";
     }
     81%,
     100%{
-        content: "Vulnerabilty Searcher";
+        content: "Software Developer";
     }
 }
 @keyframes typing{
