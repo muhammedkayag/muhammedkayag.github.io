@@ -237,11 +237,11 @@ span{
     }
     41%,
     60%{
-         content: "Penetration Tester";
+       content: "Vulnerability Researcher";
     }
     61%,
     80%{
-       content: "Vulnerability Researcher";
+       content: "Penetration Tester";
     }
     81%,
     100%{
