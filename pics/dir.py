@@ -1,52 +1,54 @@
 import httplib
 import sys
 
-# Arguman kontrolu
+# Argumanlari al
 if len(sys.argv) < 3:
-    print "Kullanim: python dirlite.py <host> <wordlist>"
+    print "Kullanim: python dirlite_legacy.py <host> <wordlist>"
     sys.exit(1)
 
-target_host = sys.argv[1]
-wordlist_file = sys.argv[2]
+target = sys.argv[1]
+wordfile = sys.argv[2]
 
-print "--- Tarama Basladi: " + target_host + " ---"
+print "--- Tarama Basliyor ---"
 
 try:
-    f = open(wordlist_file, "r")
-    lines = f.readlines()
-    f.close()
-
-    for line in lines:
+    # Dosyayi en eski yontemle ac
+    f = open(wordfile, "r")
+    
+    # Satir satir oku
+    while 1:
+        line = f.readline()
+        if not line:
+            break
+            
         path = line.strip()
         if not path:
             continue
-        
+            
         if path[0] != '/':
             path = '/' + path
 
         try:
-            # En sade baglanti sekli (timeout parametresiz)
-            h = httplib.HTTPSConnection(target_host)
-            h.request("GET", path)
-            response = h.getreply() # bazi eski surumlerde getreply() gerekebilir
-            # Eger getreply hata verirse asagidaki satiri kullan:
-            # response = h.getresponse()
+            # HTTPSConnection parametresiz (en sade hali)
+            connection = httplib.HTTPSConnection(target)
+            connection.request("GET", path)
             
-            # Python 2'de status kontrolu
-            status = response[0] if isinstance(response, tuple) else response.status
+            # Yaniti al
+            response = connection.getresponse()
             
-            if status == 200:
+            # Sadece 200 veya Yonlendirmeleri yazdir
+            if response.status == 200:
                 print "[200 OK] -> " + path
-            elif status in [301, 302]:
-                print "[REDIRECT] -> " + path
-            
-            h.close()
+            elif response.status == 301 or response.status == 302:
+                print "[302 REDIRECT] -> " + path
+                
+            connection.close()
         except:
+            # Her turlu baglanti hatasini pas gec
             pass
+            
+    f.close()
+except:
+    print "Dosya okuma hatasi!"
 
-except IOError:
-    print "Hata: Dosya bulunamadi."
-except Exception as e:
-    print "Hata: " + str(e)
-
-print "--- Bitti ---"
+print "--- Tarama Bitti ---"
